@@ -1,3 +1,3 @@
 # Resume
 
-![resume preview]()
+![resume preview](https://github.com/gongahkia/resume/blob/main/resume.png)
