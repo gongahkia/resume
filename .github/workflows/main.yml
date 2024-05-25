@@ -7,19 +7,35 @@ jobs:
       pages: write
     runs-on: ubuntu-latest
     steps:
+      - name: Set up Node.js 20
+        uses: actions/setup-node@v2
+        with:
+          node-version: '20'
+
       - name: Set up Git repository
         uses: actions/checkout@v2
+
       - name: Compile LaTeX document
         uses: xu-cheng/latex-action@v2
         with:
           root_file: src/main.tex
+
       - name: Save PDF to output folder
         run: mkdir -p output && mv main.pdf output/
+
       - name: Upload artifact
         uses: actions/upload-artifact@v2
         with:
           name: PDF
           path: output/main.pdf
+
+      - name: Add and commit PDF
+        run: |
+          git config --local user.email "action[bot]@github.com"
+          git config --local user.name "github-actions[bot]"
+          git add output/main.pdf
+          git commit -m "Add PDF file"
+
       - name: Push changes
         uses: ad-m/github-push-action@master
         with:
