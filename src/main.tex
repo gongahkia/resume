@@ -5,247 +5,187 @@
 % License : MIT
 %------------------------
 
-\documentclass[letterpaper,11pt]{article}
-
-\usepackage{latexsym}
-\usepackage[empty]{fullpage}
-\usepackage{titlesec}
-\usepackage{marvosym}
-\usepackage[usenames,dvipsnames]{color}
-\usepackage{verbatim}
-\usepackage{enumitem}
-\usepackage[pdftex]{hyperref}
-\usepackage{fancyhdr}
-
-\pagestyle{fancy}
-\fancyhf{} % clear all header and footer fields
-\fancyfoot{}
-\renewcommand{\headrulewidth}{0pt}
-\renewcommand{\footrulewidth}{0pt}
-
-% Adjust margins
-\addtolength{\oddsidemargin}{-0.375in}
-\addtolength{\evensidemargin}{-0.375in}
-\addtolength{\textwidth}{1in}
-\addtolength{\topmargin}{-.5in}
-\addtolength{\textheight}{1.0in}
-
-\urlstyle{same}
-
-\raggedbottom
-\raggedright
-\setlength{\tabcolsep}{0in}
-
-% Sections formatting
-\titleformat{\section}{
-  \vspace{-4pt}\scshape\raggedright\large
-}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
-
-%-------------------------
-% Custom commands
-\newcommand{\resumeItem}[2]{
-  \item\small{
-    \textbf{#1}{: #2 \vspace{-2pt}}
-  }
-}
-
-\newcommand{\resumeSubheading}[4]{
-  \vspace{-1pt}\item
-    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-      \textbf{#1} & #2 \\
-      \textit{\small#3} & \textit{\small #4} \\
-    \end{tabular*}\vspace{-5pt}
-}
-
-\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
-
-\renewcommand{\labelitemii}{$\circ$}
-
-\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
-\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
-\newcommand{\resumeItemListStart}{\begin{itemize}}
-\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
-
-%-------------------------------------------
-%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% -------------- Resume ---------------
+\documentclass{resume}
 
 \begin{document}
 
-%----------HEADING-----------------
-\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-  \textbf{\Large Gabriel Ong Zhe Mian} & Mobile : +65-8123-9863\\
-  \href{https://gabrielongzm.com/}{gabrielongzm.com} & Email : \href{mailto:gabrielzmong@gmail.com}{gabrielzmong@gmail.com}\\
-  \textit{Aspiring Legal Technologist} & \href{https://github.com/gongahkia}{github.com/gongahkia}\\
-\end{tabular*}
+% --------- Contact Information -----------
+\introduction[
+    fullname={Gabriel Ong Zhe Mian},
+    description={Full Stack Developer specialising in legal technology.},
+    website={gabrielongzm.com},
+    email={gabrielzmong@gmail.com},
+    phone={+65-8123-9863},
+    linkedin={linkedin.com/in/gabriel-zmong},
+    github={github.com/gongahkia},
+]
 
-%-----------EDUCATION-----------------
-\section{Education}
-  \resumeSubHeadingListStart
-    \resumeSubheading
-      {Singapore Management University}{Singapore}
-      {Bachelor of Science in Computing and Law;  GPA: 3.68/4.0}{Aug. 2023 -- May 2027}
+% --------- Education ---------
 
-    \resumeSubheading
-      {Anglo-Chinese School (Independent)}{Singapore}
-      {International Baccalaureate Diploma Programme;  Points: 44/45}{Jan. 2019 -- Nov. 2020}
-  \resumeSubHeadingListEnd
+\begin{educationSection}{Education}
 
-%-----------AWARDS---------------------
-\section{Awards}
-  \resumeSubHeadingListStart
-    \resumeSubheading
-      {SMU Global Impact Scholarship Award}{Singapore}
-      {Premier flagship scholars’ award}{Aug. 2023 -- May 2027}
+    \educationItem[
+        school={Singapore Management University},
+        program={BSc Computing and Law, Cybersecurity (2nd Major)},
+        period={Aug. 2023 - May 2027},
+        grade={GPA: 3.68/4.0},
+    ]
 
-      \resumeSubheading
-      {GeeksHacking Choice Award for HackOMania 2025}{Singapore}
-      {Annual nationwide hackathon run by GeeksHacking}{Feb. 2025}
+    \educationItem[
+        school={Anglo-Chinese School (Independent)},
+        program={International Baccalaureate Diploma Programme},
+        period={Jan. 2019 - Nov. 2020},
+        grade={Points: 44/45},
+    ]
+    
+\end{educationSection}
 
-      \resumeSubheading
-      {Champion of YouthxHack 2024: Digital Defence}{Singapore}
-      {Annual nationwide hackathon run by Cyber Youth Singapore}{Aug. 2024}
+% --------- Skills -----------
 
-      \resumeSubheading
-      {MOE EAGLES Award}{Singapore}
-      {Edusave Award for Achievement, Good Leadership and Service}{Jan. 2020}
+\begin{skillsSection}{Skills}
 
-     \resumeSubheading
-      {Deans List: HL Economics, HL Literature}{Singapore}
-      {Anglo-Chinese School (Independent) IBDP}{Nov. 2019}
-  \resumeSubHeadingListEnd
+    \skillItem[
+        category={Frontend},
+        skills={React, React Native, Next.js, Vue.js, Flutter}
+    ] \\
+    \skillItem[
+        category={Backend},
+        skills={Python, SQL, Go, JavaScript, TypeScript, Node.js, PHP, Rust}
+    ] \\
+    \skillItem[
+        category={Cloud},
+        skills={GCP, Supabase, Firebase, MongoDB, AWS, Heroku, Docker, Kubernetes, CI/CD}
+    ] \\
+    \skillItem[
+        category={Others},
+        skills={Linux, Tensorflow, PyTorch, Pandas, Vulkan, WebGL, Haskell, Lua}
+    ]\\
+    \skillItem[
+        category={Legal},
+        skills={Legal writing and research, Contract law, Criminal law, Tort law, Intellectual Property law}
+    ]
+\end{skillsSection}
 
-%-----------EXPERIENCE-----------------
-\section{Experience}
-  \resumeSubHeadingListStart
+% --------- Experience -----------
 
-    \resumeSubheading
-      {The Modo Collective}{Singapore}
-      {Founder and Lead Developer}{Jan. 2025 - Aug. 2025}
-      \resumeItemListStart
-        \resumeItem{Expo, Python, SQL, Supabase, AWS EC2}
-          {Developed and deployed the Modo full-stack web app.}
-        \resumeItem{React, Next.js, Vercel}
-          {Wrote and deployed the organisation \href{https://modo-com.vercel.app/}{website}.}
-      \resumeItemListEnd
+\begin{experienceSection}{Experience}
 
-    \resumeSubheading
-      {SMU Yong Pung How School of Law}{Singapore}
-      {Research Assistant}{Jan. 2025 - Apr. 2025}
-      \resumeItemListStart
-        \resumeItem{Python, ChromaDB}
-          {Programmed AI agents for use in legal scholarship in the research paper \lq{Hercules in Silico}\rq.}
-        \resumeItem{Research}
-          {Investigated an adversarial approach in evolving AI Agent argumentation.}
-      \resumeItemListEnd
+    \experienceItem[
+        company={The Modo Collective},
+        location={Singapore},
+        position={Founder \& Lead Developer},
+        duration={Jan. 2025 - Aug. 2025}
+    ]
+    \begin{itemize}
+        \itemsep -6pt {}
+        \item Developed the Modo cross-platform app. (Vue.js, Python, SQL, Supabase, AWS)
+        \item Deployed the organisation \href{https://modo-com.vercel.app/}{website}. (React, Next.js, Vercel)
+    \end{itemize}
 
-    \resumeSubheading
-      {Elefant}{Singapore}
-      {Backend Development Intern}{Sep. 2024 - Dec. 2024}
-      \resumeItemListStart
-        \resumeItem{Python}
-          {Developed CI/CD pipelines automating data extraction, processing, enrichment and validation.}
-        \resumeItem{Google Cloud, Colab Enterprise}
-          {Deployed web monitoring solutions to ensure continuous data availability and logging.}
-      \resumeItemListEnd
+    \experienceItem[
+        company={SMU Yong Pung How School of Law},
+        location={Singapore},
+        position={Research Assistant},
+        duration={Jan. 2025 - Apr. 2025}
+    ]
+    \begin{itemize}
+        \itemsep -6pt {}
+        \item Programmed AI agents for use in legal scholarship. (Python, ChromaDB)
+        \item Investigated an adversarial approach in evolving AI Agent argumentation. (Research)
+    \end{itemize}
 
-    \resumeSubheading
-      {The Yap Labs}{Singapore}
-      {Co-founder and Tech Development Head}{Apr. 2024 - Aug. 2024}
-      \resumeItemListStart
-        \resumeItem{Flutter, Dart, Firebase}
-          {Collaboratively developed the Yap.com mobile app.}
-        \resumeItem{JavaScript, HTML, CSS}
-          {Wrote and deployed the organisation \href{https://the-yap-labs.github.io/}{website}.}
-      \resumeItemListEnd
+    \experienceItem[
+        company={Elefant},
+        location={Singapore},
+        position={Backend Development Intern},
+        duration={Sep. 2024 - Dec. 2024}
+    ]
+    \begin{itemize}
+        \itemsep -6pt {}
+        \item Created CI/CD pipelines automating data extraction, enrichment and validation. (Python)
+        \item Deployed web monitoring solutions to log continuous data availability. (GCP, Colab Enterprise)
+    \end{itemize}
 
-    \resumeSubheading
-      {SMU Legal Innovation and Technology (LIT)}{Singapore}
-      {Tech Development Director}{Aug. 2023 - Aug. 2024}
-      \resumeItemListStart
-        \resumeItem{Python, JavaScript, Rust}
-          {Authored and Coauthored open-source projects simplifying lawyering for law students.}
-        \resumeItem{Wix}
-          {Maintained the organisation \href{https://www.smulit.org/}{website} per modern UI/UX web design philosophies.}
-      \resumeItemListEnd
+    \experienceItem[
+        company={The Yap Labs},
+        location={Singapore},
+        position={Co-founder \& Tech Development Head},
+        duration={Apr. 2024 - Aug. 2024}
+    ]
+    \begin{itemize}
+        \itemsep -6pt {}
+        \item Collaboratively developed the Yap.com mobile app. (Flutter, Dart, Firebase)
+        \item Wrote and deployed the organisation \href{https://the-yap-labs.github.io/}{website}. (JavaScript, HTML, CSS)
+    \end{itemize}
 
-    \resumeSubheading
-      {Tong Eng Group}{Singapore}
-      {Property Development Intern}{Nov. 2018 - Dec. 2018}
-      \resumeItemListStart
-        \resumeItem{Legal administration}
-          {Assisted processing of legal documents for handover of properties.}
-        \resumeItem{Microsoft 365 Suite, VBA}
-          {Leveraged Microsoft Excel and Powerpoint to compile data for presenting summary analysis.}
-      \resumeItemListEnd
+\end{experienceSection}
 
-  \resumeSubHeadingListEnd
+% --------- Projects -----------
 
-%-----------PROJECTS-----------------
-\section{Projects}
-  \resumeSubHeadingListStart
-    \resumeSubItem{Jikai}
-        {Tort law hypothetical generation model powered by RAG and agentic refinement.}
-    \resumeSubItem{Yuho}
-        {DSL providing a programmatic representation of Singapore Criminal Law.}
-    \resumeSubItem{Skill Hunter}
-        {Browser extension that embeds statutory definitions within SSO legislation.}
-    \resumeSubItem{Judgeman}
-        {Browser extension that optimizes eLitigation case facts for absorption by sanitising legalese.}
-    \resumeSubItem{DC4U}
-        {Markup language for charge sheet drafting with multiple transpiled target formats.}
-    \resumeSubItem{Feeder}
-        {Statistical visualizations of judicial rulings scraped daily from eLitigation.}
-    \resumeSubItem{Netero}
-        {Decentralized voting platform built with the Ethereum blockchain.}
-    \resumeSubItem{Imaya}
-        {Full-stack web application that takes a less-is-more approach to task prioritisation.}
-    \resumeSubItem{Owl}
-        {Google Docs, Sheets and Slides extension for monitoring and collating tags.}
-  \resumeSubHeadingListEnd
+\begin{projectSection}{Projects}
+    \projectItem[
+        name={Yuho},
+        summary={DSL providing a programmatic representation of Singapore Criminal Law.}
+    ] \\
+     \projectItem[
+        name={Jikai},
+        summary={Tort law hypothetical generation model powered by RAG and agentic refinement.}
+    ] \\   
+    \projectItem[
+        name={Skill Hunter},
+        summary={Browser extension that embeds statutory definitions within SSO legislation.}
+    ] \\
+    \projectItem[
+        name={Judgeman},
+        summary={Browser extension that optimizes eLitigation case facts for absorption by sanitising legalese.}
+    ] \\
+    \projectItem[
+        name={DC4U},
+        summary={Markup language for charge sheet drafting with multiple transpiled target formats.}
+    ] \\
+    \projectItem[
+        name={Netero},
+        summary={Decentralized voting platform built with the Ethereum blockchain.}
+    ] \\
+    \projectItem[
+        name={Owl},
+        summary={Google Docs, Sheets and Slides extension for monitoring and collating tags.}
+    ] \\
+    \projectItem[
+        name={Be-sure-ance},
+        summary={Web App to find insurance plans in Singapore.}
+    ]
+\end{projectSection}
 
-%--------PROGRAMMING SKILLS------------
-\section{Programming Skills}
- \resumeSubHeadingListStart
-   \resumeSubItem{Languages}
-      {Python, Go, JavaScript, Typescript, PHP, SQL, Rust, Dart, Haskell, Lua}
-   \resumeSubItem{Technologies}
-      {React, Next.js, Expo, Vue.js, Flutter, Pytorch, Keras, Supabase, Firebase, MongoDB, Linux}
- \resumeSubHeadingListEnd
+% --------- Awards -----------
 
- %--------LAW SKILLS------------
- \section{Law Skills}
- \resumeSubHeadingListStart
-   \resumeSubItem{General}
-      {Legal writing and research, Issue analysis, Drafting charges}
-   \resumeSubItem{Domain-specific}
-      {Singapore Contract law, Singapore Criminal law, Singapore Tort law, Singapore Intellectual Property law}
- \resumeSubHeadingListEnd
+\begin{awardSection}{Awards}
 
-%--------CERTIFICATIONS------------
+    \awardItem[
+        name={SMU Global Impact Scholarship Award},
+        organisation={Premier flagship scholars’ award},
+        period={Aug. 2023 - May 2027},
+    ]
 
-\section{Certifications}
- \resumeSubHeadingListStart
-    \resumeSubItem{Google Data Analytics Specialization}
-        {Microsoft Excel, Data Classification, SQL, Tableau, R Programming}
-    \resumeSubItem{Google Advanced Data Analytics Specialization}
-        {Python, TensorFlow, Exploratory Data Analysis, Statistical Data Analysis, Big Data Analytics, Signal Processing, Applied Machine Learning, Cloud Computing Skills}
-    \resumeSubItem{Google Cybersecurity Specialization}
-        {Python, SQL, Security Information and Event Management (SIEM), Kali Linux, Cryptography, Network Administration and Maintenance, Vulnerability Assessment and Penetration Testing (VAPT)} 
-    \resumeSubItem{Advanced Infocomm Technology}
-        {Cisco Network Configuration 3, Administration and Maintenance 3, System Integration 3, Security Administration 3, Problem Management 3}
-    \resumeSubItem{.NET Full Stack Foundation}
-        {C\#, .NET Development}
-    \resumeSubItem{Building Web Applications in PHP}
-        {SQL, PHP, Apache, Ngrock}
-    \resumeSubItem{Arm Cortex-M Architecture and Software Development Specialization}
-        {ARM Architecture}
-    \resumeSubItem{Google UX Design Specialization}
-        {Figma, User Experience Design (UED)}
-    \resumeSubItem{Google Project Management Specialization}
-        {Microsoft Excel, Tableau, Stakeholder Mapping, Agile Methodologies, Project Management, Portfolio Optimization}
-    \resumeSubItem{Google Digital Marketing \& E-commerce Specialization}
-        {Microsoft Excel, Figma, Google Ad Planner, Search Engine Optimization (SEO), Customer Relationship Management (CRM), Copywriting}      
- \resumeSubHeadingListEnd
- 
-%-------------------------------------------
+\end{awardSection}
+
+% --------- Competiton -----------
+
+\begin{competitionSection}{Competitions}
+
+    \competitionItem[
+        name={GeeksHacking Choice Award for HackOMania 2025},
+        organisation={Annual nationwide hackathon run by GeeksHacking},
+        period={Feb. 2025},
+    ]
+
+    \competitionItem[
+        name={Champion of YouthxHack 2024: Digital Defence},
+        organisation={Annual nationwide hackathon run by Cyber Youth Singapore},
+        period={Aug. 2024},
+    ]
+
+\end{competitionSection}
+
 \end{document}
