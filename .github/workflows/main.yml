@@ -13,12 +13,11 @@ jobs:
           node-version: '20'
       - name: Set up Git repository
         uses: actions/checkout@v2
-      - name: Compile LaTeX documents
+      - name: Compile LaTeX document
         uses: xu-cheng/latex-action@v2
         with:
-          root_file: |
-            src/main.tex
-            src/main.cls
+          root_file: src/main.tex
+          extra_packages: src/main.cls
       - name: Save PDF to output folder
         run: mkdir -p output && mv main.pdf output/
       - name: Upload artifact
