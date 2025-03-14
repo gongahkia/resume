@@ -19,18 +19,22 @@ jobs:
           root_file: src/main.tex     
       - name: Save PDF to output folder
         run: mkdir -p output && mv main.pdf output/
-      - name: Upload artifact
+      - name: Convert PDF to PNG
+        run: |
+          sudo apt-get update && sudo apt-get install -y poppler-utils
+          pdftoppm -png output/main.pdf > output/main.png
+      - name: Upload artifacts
         uses: actions/upload-artifact@v4
         with:
-          name: PDF
-          path: output/main.pdf
-      - name: Add and commit PDF
+          name: Output Files
+          path: output/
+      - name: Add and commit outputs (PDF and PNG)
         run: |
           git config --local user.email "action[bot]@github.com"
           git config --local user.name "github-actions[bot]"
-          git add output/main.pdf
-          git commit -m "Add PDF file"
-      - name: Push PDF
+          git add output/main.pdf output/main.png
+          git commit -m "Add compiled PDF and PNG files"
+      - name: Push changes to repository
         uses: ad-m/github-push-action@master
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
