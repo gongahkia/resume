@@ -1,0 +1,19 @@
+version: 2
+updates:
+  - package-ecosystem: "github-actions"
+    directory: "/.github/workflows"
+    schedule:
+      interval: "weekly"
+    ignore:
+      - dependency-name: "actions/setup-node"
+        versions: ["<20.0.0"] # Ignore versions below Node.js 20
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+  - package-ecosystem: "github-actions"
+    directory: "/.github/workflows"
+    schedule:
+      interval: "weekly"
+    allow:
+      - dependency-name: "xu-cheng/latex-action"
