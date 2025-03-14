@@ -16,7 +16,9 @@ jobs:
       - name: Compile LaTeX document
         uses: xu-cheng/latex-action@v2
         with:
-          root_file: src/main.tex
+          root_file: |
+            src/main.tex
+            src/main.cls      
       - name: Save PDF to output folder
         run: mkdir -p output && mv main.pdf output/
       - name: Upload artifact
