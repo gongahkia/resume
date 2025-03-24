@@ -34,7 +34,18 @@ jobs:
           git config --local user.name "github-actions[bot]"
           git add output/main.pdf output/main.png
           git commit -m "Add compiled PDF and PNG files"
-      - name: Push changes to repository
+      - name: Push changes to current repository
         uses: ad-m/github-push-action@master
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Push compiled pdf file to remote repository
+        uses: dmnemec/copy_file_to_another_repo_action@main
+        env:
+          API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
+        with:
+          source_file: 'output/main.pdf'  
+          destination_repo: 'gongahkia/gongahkia.github.io'  
+          destination_folder: 'resume'  
+          user_email: 'action[bot]@github.com'
+          user_name: 'github-actions[bot]'
+          commit_message: 'Update PDF from LaTeX build'
