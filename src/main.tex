@@ -157,14 +157,16 @@
 
 \newkeycommand{\projectItem}[
     name,
-    summary
+    summary,
+    url
 ]{%
     {%
-        \bf \commandkey{name}:
+        \bfseries
+        \href{\commandkey{url}}{\commandkey{name}}:
     } {%
         \commandkey{summary}%
     }
-}%
+}
 
 % ----------------- Awards -------------
 
@@ -325,35 +327,48 @@
 \begin{projectSection}{Projects}
     \projectItem[
         name={Yuho},
-        summary={DSL providing a programmatic representation of Singapore Criminal Law.}
+        summary={DSL providing a programmatic representation of Singapore Criminal Law.},
+        url={https://github.com/gongahkia/yuho}
     ] \\
-     \projectItem[
-        name={Jikai},
-        summary={Tort law hypothetical generation model powered by RAG and agentic refinement.}
-    ] \\  
+    \projectItem[
+        name={Sea Kayak},
+        summary={Web App that curates up-to-date legal news in Singapore.},
+        url={https://github.com/gongahkia/sea-kayak}
+    ] \\
     \projectItem[
         name={Skill Hunter},
-        summary={Browser extension that embeds statutory definitions within SSO legislation.}
-    ] \\
-    \projectItem[
-        name={Judgeman},
-        summary={Browser extension that optimizes eLitigation case facts for absorption by sanitising legalese.}
+        summary={Browser extension that embeds statutory definitions within SSO legislation.},
+        url={https://github.com/gongahkia/skill-hunter}
     ] \\
     \projectItem[
         name={DC4U},
-        summary={Markup language for charge sheet drafting with multiple transpiled target formats.}
+        summary={Markup language for charge sheet drafting with multiple transpiled target formats.},
+        url={https://github.com/gongahkia/dc4u}
+    ] \\
+     \projectItem[
+        name={Jikai},
+        summary={Tort law hypothetical generation model powered by RAG and agentic refinement.},
+        url={https://github.com/gongahkia/jikai}
+    ] \\  
+    \projectItem[
+        name={Judgeman},
+        summary={Browser extension that optimizes eLitigation case facts for absorption by sanitising legalese.},
+        url={https://github.com/gongahkia/judgeman}
+    ] \\
+    \projectItem[
+        name={Modo App},
+        summary={Social Media Web App for subcultures and niche communities.},
+        url={https://github.com/gongahkia/modo-app}
     ] \\
     \projectItem[
         name={Netero},
-        summary={Decentralized voting platform built with the Ethereum blockchain.}
+        summary={Decentralized voting platform built with the Ethereum blockchain.},
+        url={https://github.com/gongahkia/netero}
     ] \\
     \projectItem[
-        name={Owl},
-        summary={Google Docs, Sheets and Slides extension for monitoring and collating tags.}
-    ] \\
-    \projectItem[
-        name={Be-sure-ance},
-        summary={Web App to find insurance plans in Singapore.}
+        name={Uzu},
+        summary={Browser Extenstion providing structured case summaries via Gemini 2.5 Flash.},
+        url={https://github.com/gongahkia/uzu}
     ]
 \end{projectSection}
 
