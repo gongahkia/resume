@@ -191,11 +191,9 @@
 
 \newkeycommand{\competitionItem}[
     name,
-    organisation,
     period,
 ]{%
-    \textbf{\commandkey{name}} \hfill \commandkey{period} \\ 
-    \commandkey{organisation}%
+    \textbf{\commandkey{name}} \hfill \commandkey{period}%
 }
 
 % ----------------------------------------
@@ -239,19 +237,19 @@
 
     \skillItem[
         category={Frontend},
-        skills={React, React Native, Next.js, Vue.js, Svelte, Flutter}
+        skills={React, React Native, Next.js, Vue.js, Electron.js, Svelte, Flutter, Quasar, Cordova}
     ] \\
     \skillItem[
         category={Backend},
-        skills={Python, SQL, Go, JavaScript, TypeScript, Node.js, PHP, Rust, Dart}
+        skills={Python, SQL, Go, JavaScript, TypeScript, Node.js, PHP, Rust, Dart, Directus, Hookdeck}
     ] \\
     \skillItem[
         category={Cloud},
-        skills={GCP, Supabase, Firebase, MongoDB, ChromaDB, Pinecone, AWS, Heroku, Docker, Kubernetes, CI/CD}
+        skills={GCP, Supabase, MongoDB, ChromaDB, Pinecone, AWS, Heroku, Docker, Kubernetes, CI/CD}
     ] \\
     \skillItem[
         category={Others},
-        skills={Linux, TensorFlow, PyTorch, Pandas, Vulkan, WebGL, Haskell, Lua}
+        skills={Linux, TensorFlow, PyTorch, Hugging Face, WebLLM, Vulkan, WebGL, WebGPU, Haskell, Lua}
     ]\\
     \skillItem[
         category={Legal},
@@ -264,26 +262,28 @@
 \begin{experienceSection}{Experience}
 
     \experienceItem[
-        company={SMU Yong Pung How School of Law},
+        company={Custom Automated Systems},
         location={Singapore},
-        position={Research Assistant},
-        duration={Jan. 2025 - Apr. 2025}
+        position={Full Stack Development Intern},
+        duration={May 2025 - Aug. 2025}
     ]
     \begin{itemize}
         \setlength{\itemsep}{-6pt}
-        \item Programmed AI agents for use in legal scholarship. (Python, ChromaDB)
-        \item Investigated an adversarial approach in evolving AI Agent argumentation. (Research)
+        \item Implemented RAG and Agentic Refinement on ProQuaere's Outputs. (Hugging Face, TypeScript)
+        \item Optimised ProQuaere's Client LLM performance on Browser, Desktop, Mobile. (WebGPU, Vue.js, Electron.js)
+        \item Upgraded Caselist's Backend for Legal Case Retrieval from CommonLII, Lawphil, SAL LawNet Databases. (PHP)
     \end{itemize}
 
     \experienceItem[
-        company={The Modo Collective},
+        company={SMU Yong Pung How School of Law},
         location={Singapore},
-        position={Founder \& Lead Developer},
-        duration={Aug. 2024 - Mar. 2025}
+        position={Research Assistant},
+        duration={Jan. 2025 - Aug. 2025}
     ]
     \begin{itemize}
         \setlength{\itemsep}{-6pt}
-        \item Wrote and deployed the Modo cross-platform \href{https://modo-live.netlify.app/}{app}. (Vue.js, Python, SQL, Supabase, AWS, Netlify)
+        \item Programmed Adversarial AI agents for use in legal scholarship and argumentation. (Python, ChromaDB)
+        \item Deployed Web App for Benchmarking of AI Agents on Legal Analysis tasks. (JavaScript)
     \end{itemize}
 
     \experienceItem[
@@ -299,14 +299,15 @@
     \end{itemize}
 
     \experienceItem[
-        company={The Yap Labs},
+        company={Various Startups},
         location={Singapore},
-        position={Co-founder \& Tech Development Head},
-        duration={Apr. 2024 - Aug. 2024}
+        position={Founder, Co-founder, Tech Development Head},
+        duration={Apr. 2024 - Mar. 2025}
     ]
     \begin{itemize}
         \setlength{\itemsep}{-6pt}
-        \item Collaboratively developed the Yap.com mobile app. (Flutter, Dart, Firebase)
+        \item The Yap Labs: Collaboratively developed the Yap.com mobile app. (Flutter, Dart, Firebase)\
+        \item The Modo Collective: Wrote and deployed the Modo cross-platform \href{https://modo-live.netlify.app/}{app}. (Vue.js, Python, SQL, AWS, Netlify)
     \end{itemize}
 
     \experienceItem[
@@ -356,11 +357,6 @@
         url={https://github.com/gongahkia/judgeman}
     ] \\
     \projectItem[
-        name={Modo App},
-        summary={Social Media Web App for subcultures and niche communities.},
-        url={https://github.com/gongahkia/modo-app}
-    ] \\
-    \projectItem[
         name={Netero},
         summary={Decentralized voting platform built with the Ethereum blockchain.},
         url={https://github.com/gongahkia/netero}
@@ -390,13 +386,11 @@
 
     \competitionItem[
         name={GeeksHacking Choice Award for HackOMania 2025},
-        organisation={Annual nationwide hackathon run by GeeksHacking},
         period={Feb. 2025}
     ]
 
     \competitionItem[
         name={Champion of YouthxHack 2024: Digital Defence},
-        organisation={Annual nationwide hackathon run by Cyber Youth Singapore},
         period={Aug. 2024}
     ]
 
