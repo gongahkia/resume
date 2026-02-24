@@ -1,0 +1,9 @@
+repos:
+  - repo: local
+    hooks:
+      - id: chktex
+        name: chktex latex lint
+        language: system
+        entry: chktex -n1 -n8 -n44
+        files: \.tex$
+        pass_filenames: true
