@@ -170,30 +170,17 @@
 
 % ----------------- Awards -------------
 
-\newenvironment{awardSection}[1]{%
+\newenvironment{awardCompetitionSection}[1]{%
     \sectionTitle{#1}%
 }%
 
-\newkeycommand{\awardItem}[
+\newkeycommand{\awardCompetitionItem}[
     name,
     organisation,
     period,
 ]{%
     \textbf{\commandkey{name}} \hfill \commandkey{period} \\ 
     \commandkey{organisation}%
-}
-
-% ----------------- Competitions -------------
-
-\newenvironment{competitionSection}[1]{%
-    \sectionTitle{#1}%
-}%
-
-\newkeycommand{\competitionItem}[
-    name,
-    period,
-]{%
-    \textbf{\commandkey{name}} \hfill \commandkey{period}%
 }
 
 % ----------------------------------------
@@ -340,41 +327,39 @@
 
 % --------- Awards -----------
 
-\begin{awardSection}{Awards, Competitions}
+\begin{awardCompetitionSection}{Awards, Competitions}
 
-    \awardItem[
+    \awardCompetitionItem[
         name={SMU Global Impact Scholarship Award},
         organisation={Premier flagship scholars’ award},
         period={Aug. 2023 - May 2027}
     ]
 
-\end{awardSection}
-
-% --------- Competiton -----------
-
-\begin{competitionSection}{Competitions}
-
-    \competitionItem[
-        name={Champion of SMU LIT Hackathon 2025: MinLaw Track 2},
+    \awardCompetitionItem[
+        name={SMU LIT Hackathon 2025: MinLaw Track 2},
+        organisation={1st Place},
         period={Sep. 2025}
     ]
 
-    \competitionItem[
-        name={Second place for Vibe-Building Hackathon 2025},
+    \awardCompetitionItem[
+        name={Vibe-Building Hackathon 2025},
+        organisation={2nd Place},
         period={Aug. 2025}
     ]
 
-    \competitionItem[
-        name={GeeksHacking Choice Award for HackOMania 2025},
+    \awardCompetitionItem[
+        name={HackOMania 2025},
+        organisation={GeeksHacking Choice Award},
         period={Feb. 2025}
     ]
 
-    \competitionItem[
-        name={Champion of YouthxHack 2024: Digital Defence},
+    \awardCompetitionItem[
+        name={YouthxHack 2024: Digital Defence},
+        organisation={1st Place},
         period={Aug. 2024}
     ]
 
-\end{competitionSection}
+\end{awardCompetitionSection}
 
 \end{document}
 
