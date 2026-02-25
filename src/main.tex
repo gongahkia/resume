@@ -52,9 +52,7 @@
     \endgroup
 }%
 
-% -------------- Resume ---------------
-
-% ------------- Header --------------
+% ------------- Header Template --------------
 
 \newcommand\printNameDesc[7]{%
     \begingroup
@@ -88,7 +86,7 @@
     \printNameDesc{\commandkey{fullname}}{\commandkey{description}}{\commandkey{website}}{\commandkey{phone}}{\commandkey{email}}{\commandkey{github}}{\commandkey{linkedin}}
 }
 
-% ------------ Education ------------
+% ------------ Education Template ------------
 
 \newenvironment{educationSection}[1]{%
     \sectionTitle{#1}%
@@ -104,7 +102,7 @@
     \commandkey{program} \hfill \raggedleft\commandkey{grade} %
 }
 
-% -------------- Skills --------------
+% -------------- Skills Template --------------
 
 \newenvironment{skillsSection}[1]{%
     \sectionTitle{#1}%
@@ -121,7 +119,7 @@
     }
 }%
 
-% -------------- Experience -------------
+% -------------- Experience Template -------------
 
 \newenvironment{experienceSection}[1]{%
     \sectionTitle{#1}%
@@ -149,7 +147,7 @@
     \vspace{-0.5em}%
 }%
 
-% ----------------- Project -------------
+% ----------------- Project Template -------------
 
 \newenvironment{projectSection}[1]{%
     \sectionTitle{#1}%
@@ -168,7 +166,7 @@
     }
 }
 
-% ----------------- Awards -------------
+% ----------------- Awards and Competitions Template -------------
 
 \newenvironment{awardCompetitionSection}[1]{%
     \sectionTitle{#1}%
@@ -182,6 +180,10 @@
     \textbf{\commandkey{name}} \hfill \commandkey{period} \\ 
     \commandkey{organisation}%
 }
+
+% ----------------------------------------
+
+% ---------------- Resume ----------------
 
 % ----------------------------------------
 
@@ -236,8 +238,9 @@
     ] \\
     \skillItem[
         category={Legal},
-        skills={Legal writing, Contract law, Criminal law, Tort law, Intellectual Property law, Privacy Law, Company Law}
+        skills={Intellectual Property law, Privacy & Data Protection Law, Company Law, Contract Law}
     ]
+
 \end{skillsSection}
 
 % --------- Experience -----------
