@@ -26,6 +26,7 @@
 \renewcommand\familydefault{\sfdefault} 
 \usepackage[T1]{fontenc} 
 \pagestyle{empty}
+\usepackage{fontawesome5}
 
 % ------------ Utilities ------------
 
@@ -155,6 +156,7 @@
     summary,
     url
 ]{%
+    \faGithub\
     {%
         \bfseries
         \href{\commandkey{url}}{\commandkey{name}}:
@@ -167,6 +169,7 @@
 
 \newenvironment{awardCompetitionSection}[1]{%
     \sectionTitle{#1}%
+    \setlength{\parskip}{2pt}%
 }%
 
 \newkeycommand{\awardCompetitionItem}[
@@ -252,7 +255,7 @@
     ]
     \begin{itemize}
         \setlength{\itemsep}{-6pt}
-        \item Architected a multi-agent ETL pipeline using \textbf{Python} and \textbf{Pydantic AI} to detect emergent harms across \textbf{10,000+} PubMed abstracts, reducing manual review time by an estimated \textbf{60\%}.
+        \item Architected a multi-agent ETL pipeline using \textbf{Python} and \textbf{Pydantic AI} to detect emergent harms across \textbf{50,000+} PubMed abstracts, reducing manual review time by \textbf{60\%}.
     \end{itemize}
 
     \experienceItem[
@@ -263,7 +266,7 @@
     ]
     \begin{itemize}
         \setlength{\itemsep}{-6pt}
-        \item Implemented RAG and Agentic Refinement on ProQuaere's Outputs with \textbf{TypeScript} and \textbf{Hugging Face} models. 
+        \item Developed a RAG-based refinement engine with \textbf{TypeScript} and \textbf{Hugging Face}, improving query accuracy by \textbf{25\%} across \textbf{7,500+} profiles. 
         \item Optimised client-side LLM inference for ProQuaere using \textbf{WebGPU} and \textbf{Electron.js}, achieving a \textbf{40\%} reduction in average response latency.
     \end{itemize}
 
@@ -275,7 +278,7 @@
     ]
     \begin{itemize}
         \setlength{\itemsep}{-6pt}
-        \item Built a \textbf{15-agent large} Adversarial AI agent network in \textbf{Pydantic AI} and \textbf{ChromaDB} for use in ongoing academic publication research.
+        \item Architected a \textbf{15-agent} adversarial network with \textbf{Pydantic AI} and \textbf{ChromaDB} to simulate multi-party legal debate, contributing to the academic publication \textit{Hercules in Silico} under Asst. Prof. Jerrold Soh.
     \end{itemize}
 
     \experienceItem[
@@ -286,7 +289,7 @@
     ]
     \begin{itemize}
         \setlength{\itemsep}{-6pt}
-        \item Engineered \textbf{CI/CD} pipelines in \textbf{Python} and \textbf{GCP} that automated end-to-end data extraction, enrichment, and validation workflows, reducing manual data processing effort by \textbf{65\%} and improving data reliability.
+        \item Engineered \textbf{CI/CD} pipelines in \textbf{Python} and \textbf{GCP} that automated end-to-end data extraction, enrichment, and validation workflows, reducing data processing effort by \textbf{65\%} and improving data reliability.
     \end{itemize}
 
 \end{experienceSection}
@@ -297,12 +300,12 @@
 
     \projectItem[
         name={Yuho},
-        summary={Domain-specific language (DSL) in \textbf{Rust} that provides a formal, programmatic representation of Singapore's Penal Code, enabling automated legal reasoning and statute querying across \textbf{50+ criminal offences}.},
+        summary={Domain-specific language (DSL) in \textbf{Rust} that provides a formal, programmatic representation of Singapore's Penal Code, enabling automated legal reasoning and statute querying across \textbf{350+} criminal offences.},
         url={https://github.com/gongahkia/yuho}
     ] \\
     \projectItem[
         name={Sea Kayak},
-        summary={Full-stack \textbf{React} and \textbf{Node.js} web application that aggregates and curates real-time legal news from \textbf{10+ Singapore sources}.},
+        summary={\textbf{React} and \textbf{Node.js} web application that aggregates, curates and serves real-time legal news from \textbf{10+} Singapore sources.},
         url={https://github.com/gongahkia/sea-kayak}
     ] \\
      \projectItem[
@@ -317,6 +320,7 @@
 
 \begin{awardCompetitionSection}{Awards \& Competitions}
 
+    \vspace{6pt}%
     \awardCompetitionItem[
         name={SMU Global Impact Scholarship Award},
         organisation={Premier flagship scholars’ award},
