@@ -156,10 +156,9 @@
     summary,
     url
 ]{%
-    \faGithub\
     {%
         \bfseries
-        \href{\commandkey{url}}{\commandkey{name}}:
+        \href{\commandkey{url}}{\faGithub\ \commandkey{name}}:
     } {%
         \commandkey{summary}%
     }
@@ -170,6 +169,7 @@
 \newenvironment{awardCompetitionSection}[1]{%
     \sectionTitle{#1}%
     \setlength{\parskip}{2pt}%
+    \setlength{\parfillskip}{0pt}%
 }%
 
 \newkeycommand{\awardCompetitionItem}[
@@ -177,8 +177,7 @@
     organisation,
     period,
 ]{%
-    \textbf{\commandkey{name}} \hfill \commandkey{period} \\ 
-    \commandkey{organisation}%
+    \textbf{\commandkey{name}}: \textit{\commandkey{organisation}} \hfill \commandkey{period}%
 }
 
 % ----------------------------------------
@@ -220,7 +219,7 @@
         grade={}
     ]
     \par\vspace{-0.6em}
-    {\raggedright \textbullet\ \textbf{Coursework:} Advanced Database System (Relational, OO, NoSQL)\hfill\par}
+    {\raggedright \textbullet\ \textbf{Coursework:} Advanced Database System, AI in Business\hfill\par}
     
 \end{educationSection}
 
@@ -297,33 +296,38 @@
 
 \end{experienceSection}
 
+% --------- Projects -----------
+
+\begin{projectSection}{Projects}
+
+    \projectItem[
+        name={Hot Cross Buns},
+        summary={Built a local AI assistant in \textbf{Go} and \textbf{TypeScript} with a custom agent harness, persistent memory and a \textbf{24}-task evaluation suite.},
+        url={https://github.com/gongahkia/hot-cross-buns}
+    ] \\
+    \projectItem[
+        name={Sea Kayak},
+        summary={Built a \textbf{React/Next.js} web app with a \textbf{TypeScript} pipeline that aggregates, curates and serves real-time legal news from \textbf{35+ Singapore sources}, automated with \textbf{GitHub Actions}.},
+        url={https://github.com/gongahkia/sea-kayak}
+    ]
+
+\end{projectSection}
+
 % --------- Skills -----------
 
 \begin{skillsSection}{Skills}
 
     \skillItem[
+        category={Languages \& Apps},
+        skills={Python, TypeScript, Go, SQL, Node.js, React, Next.js, React Native, Flutter, Electron.js}
+    ] \\
+    \skillItem[
+        category={Backend \& Cloud},
+        skills={FastAPI, Docker, Kubernetes, AWS, GCP, Cloudflare, Pinecone, Supabase}
+    ] \\
+    \skillItem[
         category={AI},
-        skills={Agent Orchestration, MCP, RAG, Context Management, Evaluation, LangChain, Pydantic AI, Hugging Face}
-    ] \\
-    \skillItem[
-        category={Frontend},
-        skills={React, Next.js, React Native, Flutter, Electron.js}
-    ] \\
-    \skillItem[
-        category={Backend},
-        skills={Python, TypeScript, Go, SQL, Node.js, Rust}
-    ] \\
-    \skillItem[
-        category={Infrastructure},
-        skills={Docker, Kubernetes, GCP, AWS, GitHub Actions, Supabase, MongoDB, Pinecone, Cloudflare}
-    ] \\
-    \skillItem[
-        category={Product},
-        skills={Product Discovery, PRDs, Product Metrics}
-    ] \\
-    \skillItem[
-        category={Legal},
-        skills={Intellectual Property Law, Privacy \& Data Protection Law, Company Law, Contract Law}
+        skills={MCP, RAG, LangChain, Agent Orchestration, Evaluation, Harness Engineering}
     ]
 
 \end{skillsSection}
